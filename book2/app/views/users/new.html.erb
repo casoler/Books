@@ -1,0 +1,32 @@
+<h2>New User ID</h2>
+
+<%= error_messages_for :user %>
+
+<div class="login">
+<% form_for(@user) do |f| %>
+  
+  <p>
+	<b>First Name</b><br />
+	<%= f.text_field :first_name %>
+  </p>
+  <p>
+    <b>Username</b><br />
+    <%= f.text_field :username %>
+  </p>
+
+  <p>
+    <b>Password</b><br />
+    <%= f.text_field :password %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %><br/><br/>
+
+
+<%= link_to '<strong>Already have an ID?</strong>', :controller => :users, :action => :login %><br/><br/>
+
+</div>
+
+

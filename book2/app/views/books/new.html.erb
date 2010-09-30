@@ -1,0 +1,36 @@
+<h2>New book</h2>
+
+<%= error_messages_for :book %>
+
+<% form_for(@book) do |f| %>
+	<div class="new">
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title, :size => 80 %>
+  </p>
+
+  <p>
+    <b>Author</b><br/>    
+    &nbsp; First <%= f.text_field :author_first %><br/>
+    &nbsp; Last  <%= f.text_field :author_last %>
+  </p>
+  
+  <table>
+  	<tr>
+  		<th width="50"><b>Published Year</b></th>
+  		<th width="50"><b>Category</b></th>
+  	</tr>
+  	
+  	<tr>
+    	<td><%= f.text_field :publish_year, :size => 4, :value => "" %></td>
+    	<td><%= select(:book, :category_id, @all_categories) %></td>
+    </tr>
+  </table>
+
+  <p>
+    <%= f.submit "Create", :class => "button1" %>
+  </p>
+  </div>
+<% end %>
+
+<br /><br />

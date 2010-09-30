@@ -1,0 +1,32 @@
+<table>
+	<tr>
+		<td width="400"><font size="3"><b><%=h @book.title %></b></font></td>
+	
+		
+	</tr>
+    <tr>
+    	<td>Author:  <%=h @book.author_first %> <%=h @book.author_last %></td>
+    	<% if @in_favs %>
+			<td>Currently in My Favorites</td>
+		<% else %>
+			<td>Not in My Favorites</td>
+		<% end %>
+    	
+    </tr>
+    <tr>
+    	<td>Published in:  <%=h @book.publish_year %></td>
+    	<% if @in_favs %>
+			<td><%= link_to 'Delete from My Favorites', :controller => 'books', :action => 'delete_from_favs', :id => @book.id %></td>
+		<% else %>
+			<td><%= link_to 'Add to My Favorites', :controller => 'books', :action => 'add_to_favs', :id => @book.id %></td>
+		<% end %>
+    </tr>
+    <tr>
+    	<td>Category:  <%=h @book.category.name %></td>
+    </tr>
+</table>
+
+<br /><br />
+
+
+

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+casoler:
+  id: 1
+  username: casoler
+  password: secret
+  first_name: Carolina
+
+cmrodriguez:
+  id: 2
+  username: cmrodriguez
+  password: secret
+  first_name: Cristina
+  
+atrodriguez:
+  id: 3
+  username: atrodriguez
+  password: secret
+  first_name: Amanda

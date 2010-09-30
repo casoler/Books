@@ -1,0 +1,44 @@
+class AddDataToCategories < ActiveRecord::Migration
+  def self.up
+  	down
+  	
+  	Category.create(:name => 'Fiction - Adventure')
+	Category.create(:name => 'Fiction - Christian')
+	Category.create(:name => 'Fiction - Fantasy')
+	Category.create(:name => 'Fiction - Graphic Novels')
+	Category.create(:name => 'Fiction - Historical')
+	Category.create(:name => 'Fiction - Horror')
+	Category.create(:name => 'Fiction - Humorous')
+	Category.create(:name => 'Fiction - Legal Stories')
+	Category.create(:name => 'Fiction - Mystery')
+	Category.create(:name => 'Fiction - Romance (Love Stories)')
+	Category.create(:name => 'Fiction - Romantic Suspense')
+	Category.create(:name => 'Fiction - Science')
+	Category.create(:name => 'Fiction - Short Stories')
+	Category.create(:name => 'Fiction - Suspense')
+	Category.create(:name => 'Fiction - Spy Stories')
+	Category.create(:name => 'Fiction - Western')
+
+	Category.create(:name => 'Non-Fiction - Computer Science')
+	Category.create(:name => 'Non-Fiction - Information')
+	Category.create(:name => 'Non-Fiction - General Works')
+	Category.create(:name => 'Non-Fiction - Philosophy')
+	Category.create(:name => 'Non-Fiction - Psychology')
+	Category.create(:name => 'Non-Fiction - Religion')
+	Category.create(:name => 'Non-Fiction - Social Sciences')
+	Category.create(:name => 'Non-Fiction - Language')
+	Category.create(:name => 'Non-Fiction - Science (including Mathematics)')
+	Category.create(:name => 'Non-Fiction - Technology/Applied Science')
+	Category.create(:name => 'Non-Fiction - Arts')
+	Category.create(:name => 'Non-Fiction - Recreation')
+	Category.create(:name => 'Non-Fiction - Literature')
+	Category.create(:name => 'Non-Fiction - History')
+	Category.create(:name => 'Non-Fiction - Geography')
+	Category.create(:name => 'Non-Fiction - Biography')
+	
+  end
+
+  def self.down
+  	Category.delete_all
+  end
+end

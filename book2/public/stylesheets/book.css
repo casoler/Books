@@ -1,0 +1,28 @@
+html { height: 100%; width: 100%; }
+
+body table { width: 100%; border-collapse: collapse; }
+table tr td, table tr th { vertical-align: top; }
+th { text-align: left; }
+
+.main { width: 82%; float: right;  }
+.navigation { width: 15%; float: left; border-right: solid gray; min-height: 300px; margin-left: 20px;}
+.row1 { background: #DDDDDD; }
+.row2 { background: #FFFFFF; }
+.user-info { text-align: right; font-weight: bold; margin-right: 10px;}
+.msg { text-align: left; font-weight: bold; color: #800000;}
+
+.new {width: 530px; border: 2px solid #004080; height: auto; text-align: left; padding: 5px; margin-left: auto; margin-right: auto; margin-bottom: auto; background: #FFFFFF; color: black;}
+
+.button1 { margin-left: auto; margin-right: auto; }
+
+#header { margin: 0; padding: .5em; height: 70px; font-size: 1.2em; 
+	background: #004080; color: #FFFFFF; clear: both; }
+
+#pagecontent { margin: 2em; min-height: 400px; }
+#footer { margin: 3em 0 0 0; padding: .5em;height: 50px; text-align: center; 
+	background: #004080; color: #FFFFFF; clear: both; }
+
+#header h2 { margin: 0; padding: .25em; }
+#pagecontent h1 { color: #800000; }
+a, a:visited { color: #800000; }
+a:hover { background: #CCCCCC; }

@@ -1,0 +1,41 @@
+<h2> <%=h page_title %> </h2>
+
+<table>
+	<tr>
+	    <th width="200">Title</th>
+	    <th width="125">Author</th>
+	    <th width="50">Published in</th>
+	    <th width="125">Category</th>
+	    <th width="200"> </th>
+	</tr>			
+
+	<% if @books.length != 0 %>
+		<% for book in @books %>
+		  	<tr class="<%= cycle('row1', 'row2')%>">
+		    	<td><%= link_to h(book.title), :action => 'show', :id => book.id %></td>
+		    	<td><%=h book.author_first %> <%=h book.author_last%></td>
+		    	<td><%=h book.publish_year %></td>
+		    	<td><%=h book.category.name %></td>
+		    
+		    	<!-- on all and other screen - want to add book to mine? -->
+		    	<% if @choice != 'mine' && !@user.favorite_exists?(book)%>	
+		 			<td><%=link_to "Add to Fav's", :action => 'add_to_favs', :id => book.id %></td>
+		 		<% else %>
+		 		<!-- on mine (my) - want to delete book from mine? -->
+		 		<% if @choice == 'mine' %>
+		 			<td><%=link_to "Delete from Fav's", :action => 'delete_from_favs', :id => book.id %></td>
+		 		<% else %>
+		 			<td>&nbsp;</td>
+		 		<% end %>
+		 		<% end %>
+			</tr>
+		<% end %>
+	<% else %>
+		<tr>
+			<td class="msg"><br/> ==> There are no books in this list. <== </td>
+		</tr>
+	<% end %>
+</table>			<br />
+
+<%= will_paginate @books %>   <br /><br />
+
