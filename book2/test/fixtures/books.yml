@@ -5,25 +5,25 @@ rails_book_1:
   author_first: Noel
   author_last: Rappin
   publish_year: 2008
-  category_id: 1
+  category_id: 592789234
 
 ruby_book:
   title: Programming Ruby 1.9
   author_first: Dave
   author_last: Thomas
   publish_year: 2009
-  category_id: 1
+  category_id: 592789234
   
 javascript_book:
   title: Beginning JavaScript
   author_first: Paul
   Author_last: Wilton
   publish_year: 2010
-  category_id: 1
+  category_id: 592789234
   
 rails_book_2:
-  title: Professional Ruby on Rails
-  author_first: Noel
-  author_last: Rappin
-  publish_year: 2008
-  category_id: 1
+  title: Agile Web Development with Rails
+  author_first: Sam
+  author_last: Ruby
+  publish_year: 2009
+  category_id: 592789234
